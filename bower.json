@@ -1,0 +1,21 @@
+{
+  "name": "jqueryContact",
+  "homepage": "https://github.com/caneruguz/jqueryContact",
+  "authors": [
+    "Caner Uguz <caneruguz@gmail.com>"
+  ],
+  "description": "jquery contact list",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
