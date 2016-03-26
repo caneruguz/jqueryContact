@@ -1,3 +1,4 @@
+
 $('#addContactButton').on('click', function(){
 	var element = $('#nameField');
 	var name = element.val();
@@ -33,7 +34,18 @@ $('#searchItems').keyup(function(){
 
 });
 
+function buildTemplate (name) { // VIEW
+	return '<div class="contact-list-item"><span>' + name + '</span> <button class="btn btn-sm btn-danger remove-contact">Delete </button></div>';
+}
 
+function loadContacts (container, contacts) { // CONTROLLER
+	contacts.forEach(function(item){
+		$(container).append(buildTemplate(item));
+	});
+}
 
-
+$(document).ready(function(){
+	var existingContacts = ['Maria', 'Jamal', 'John', 'Jenny', 'Alice']; // MODEL
+	loadContacts('.userContainer', existingContacts);
+});
 
